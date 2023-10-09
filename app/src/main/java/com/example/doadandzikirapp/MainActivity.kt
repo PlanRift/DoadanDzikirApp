@@ -3,6 +3,7 @@ package com.example.doadandzikirapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
@@ -12,7 +13,7 @@ import com.example.doadandzikirapp.adapter.ArtikelAdapter
 import com.example.doadandzikirapp.databinding.ActivityMainBinding
 import com.example.doadandzikirapp.model.ArtikelModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var slideIndicator : Array<ImageView?>
@@ -53,6 +54,8 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             vpArtikel.adapter = ArtikelAdapter(listArtikel)
             vpArtikel.registerOnPageChangeCallback(slidingCallback)
+
+            llDzikirDoaShalat.setOnClickListener(this)
         }
     }
 
@@ -116,5 +119,9 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         binding.vpArtikel.unregisterOnPageChangeCallback(slidingCallback)
+    }
+
+    override fun onClick(p0: View?) {
+
     }
 }

@@ -7,7 +7,7 @@ import com.example.doadandzikirapp.databinding.RowItemDzikirDoaBinding
 import com.example.doadandzikirapp.model.DzikirDoaModel
 
 class DzikirDoaAdapter(private val listDzikirDoa: ArrayList<DzikirDoaModel>) :
-RecyclerView.Adapter<DzikirDoaAdapter.MyViewHolder>{
+    RecyclerView.Adapter<DzikirDoaAdapter.MyViewHolder>() {
     class MyViewHolder(val binding: RowItemDzikirDoaBinding) :
     RecyclerView.ViewHolder(binding.root){
 
