@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             vpArtikel.adapter = ArtikelAdapter(listArtikel)
             vpArtikel.registerOnPageChangeCallback(slidingCallback)
 
-            llDzikirDoaShalat.setOnClickListener(this)
+            llDzikirDoaShalat.setOnClickListener(this@MainActivity)
         }
     }
 
