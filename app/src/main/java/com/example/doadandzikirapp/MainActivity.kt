@@ -13,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.doadandzikirapp.adapter.ArtikelAdapter
 import com.example.doadandzikirapp.databinding.ActivityMainBinding
 import com.example.doadandzikirapp.model.ArtikelModel
+import com.example.doadandzikirapp.ui.DzikirSetiapSaatActivity
 import com.example.doadandzikirapp.ui.SunnahQouliyahActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -58,6 +59,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             vpArtikel.registerOnPageChangeCallback(slidingCallback)
 
             llDzikirDoaShalat.setOnClickListener(this@MainActivity)
+
+            llDzikirSetiapSaat.setOnClickListener(this@MainActivity)
         }
     }
 
@@ -129,6 +132,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val intentDOS = Intent(this@MainActivity, SunnahQouliyahActivity::class.java)
             startActivity(intentDOS)
         }
+        R.id.ll_dzikir_setiap_saat -> {
+            val intentDOS = Intent(this@MainActivity, DzikirSetiapSaatActivity::class.java)
+            startActivity(intentDOS)
+        }
     }
     }
+
 }

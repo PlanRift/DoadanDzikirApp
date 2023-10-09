@@ -18,7 +18,7 @@ class SunnahQouliyahActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Sunnah - Sununah Qouliyah"
+        supportActionBar?.title = "Sunnah - Sunnah Qouliyah"
 
         binding.apply {
             rvQauliyahShalat.layoutManager = LinearLayoutManager(this@SunnahQouliyahActivity)
@@ -26,7 +26,8 @@ class SunnahQouliyahActivity : AppCompatActivity() {
         }
 
 
-        }
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressedDispatcher.onBackPressed()
         return super.onSupportNavigateUp()
