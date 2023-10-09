@@ -1,5 +1,6 @@
 package com.example.doadandzikirapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
@@ -12,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.doadandzikirapp.adapter.ArtikelAdapter
 import com.example.doadandzikirapp.databinding.ActivityMainBinding
 import com.example.doadandzikirapp.model.ArtikelModel
+import com.example.doadandzikirapp.ui.SunnahQouliyahActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -121,7 +123,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.vpArtikel.unregisterOnPageChangeCallback(slidingCallback)
     }
 
-    override fun onClick(p0: View?) {
-
+    override fun onClick(v: View?) {
+    when(v?.id){
+        R.id.ll_dzikir_doa_shalat -> {
+            val intentDOS = Intent(this@MainActivity, SunnahQouliyahActivity::class.java)
+            startActivity(intentDOS)
+        }
+    }
     }
 }
