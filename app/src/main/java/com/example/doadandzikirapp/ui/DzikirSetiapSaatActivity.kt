@@ -17,7 +17,7 @@ class DzikirSetiapSaatActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Dzikir - Dzikir Setiap Saat"
+        supportActionBar?.title = "Dzikir - Setiap Saat"
 
         binding.apply {
             rvDzikirSetiapSaat.layoutManager = LinearLayoutManager(this@DzikirSetiapSaatActivity)
