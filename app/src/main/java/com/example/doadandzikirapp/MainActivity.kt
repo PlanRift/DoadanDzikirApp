@@ -15,6 +15,7 @@ import com.example.doadandzikirapp.databinding.ActivityMainBinding
 import com.example.doadandzikirapp.model.ArtikelModel
 import com.example.doadandzikirapp.ui.DzikirPagidanPetangActivity
 import com.example.doadandzikirapp.ui.DzikirSetiapSaatActivity
+import com.example.doadandzikirapp.ui.DzikirdanDoaHarianActivity
 import com.example.doadandzikirapp.ui.SunnahQouliyahActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             llDzikirDoaShalat.setOnClickListener(this@MainActivity)
             llDzikirSetiapSaat.setOnClickListener(this@MainActivity)
             llDzikirPagiPetang.setOnClickListener(this@MainActivity)
+            llDzikirDoaHarian.setOnClickListener(this@MainActivity)
         }
     }
 
@@ -139,6 +141,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         R.id.ll_dzikir_pagi_petang -> {
             val intentDOS = Intent(this@MainActivity, DzikirPagidanPetangActivity::class.java)
+            startActivity(intentDOS)
+        }
+        R.id.ll_dzikir_doa_harian -> {
+            val intentDOS = Intent(this@MainActivity, DzikirdanDoaHarianActivity::class.java)
             startActivity(intentDOS)
         }
     }

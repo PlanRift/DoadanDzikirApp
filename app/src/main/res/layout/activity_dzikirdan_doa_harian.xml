@@ -24,9 +24,10 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_dzikir_setiap_saat"
+        android:id="@+id/rv_dzikir_doa_harian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/row_item_dzikir_doa"
         android:layout_below="@+id/tv_txt_dzikir_doa_harian" />
+
 </RelativeLayout>

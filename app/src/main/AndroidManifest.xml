@@ -29,7 +29,8 @@
             android:theme="@style/Theme.DoadanDzikirApp.actionbar"/>
         <activity
             android:name=".ui.DzikirdanDoaHarianActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.DoadanDzikirApp.actionbar"/>
         <activity
             android:name=".ui.DzikirSetiapSaatActivity"
             android:exported="false"
